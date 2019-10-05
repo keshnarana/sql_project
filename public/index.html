@@ -16,11 +16,12 @@
   <link href="css/font-awesome.min.css" rel="stylesheet" />
  
   <!-- Custom styles -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
 
   <link href="css/widgets.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
   <link href="css/style-responsive.css" rel="stylesheet" />
-
+  <script src ="js/example.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
  
 </head>
@@ -60,7 +61,7 @@
             <ul class="dropdown-menu extended logout">
               <div class="log-arrow-up"></div>
               <li class="eborder-top">
-                <a href="#"><i class="icon_profile"></i> My Profile</a>
+                <a href="profile.html"><i class="icon_profile"></i> My Profile</a>
               </li>
              
              
@@ -138,17 +139,18 @@
               Advanced Table
             </header>
 
-            <table class="table table-striped table-advance table-hover">
-              <tbody>
-                <tr>
+            <table id="table" class="table table-striped table-advance table-hover">
+              <thead id="tb">
+                <tr id= "tr">
                   <th><i class="icon_profile"></i> id</th>
                   <th><i class="icon_calendar"></i> Name</th>
                   <th><i class="icon_mail_alt"></i> Email</th>
-                  <th><i class="icon_mobile"></i> Mobile</th>
-                 
+                   <th><i class="icon_mobile"></i> Phone</th>
+                   <th><i class="icon_profile"></i> Delete</th>
                 </tr>
                 
-              </tbody>
+              </thead>
+             <tbody id="tbody"></tbody>
             </table>
           </section>
         </div>
@@ -165,13 +167,6 @@
     </div>
   </div>
 </section>
-
-
-
-
-
-
-
 
 
   <script src="js/jquery.js"></script>
@@ -198,7 +193,9 @@
   <script src="js/form-component.js"></script>
   <!-- custome script for all page -->
   <script src="js/scripts.js"></script>
-   
+
+   <script>
+   </script>
 
 </body>
 
