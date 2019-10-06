@@ -171,6 +171,8 @@ textarea {
   vertical-align: top;
 }
 table {
+  max-width: 100%;
+  width: 100%;
   border-collapse: collapse;
   border-spacing: 0;
 }
@@ -230,6 +232,7 @@ table {
   .table td,
   .table th {
     background-color: #fff !important;
+    width: 20%;
   }
   .btn > .caret,
   .dropup > .btn > .caret {
@@ -1299,6 +1302,7 @@ th {
   line-height: 1.428571429;
   vertical-align: top;
   border-top: 1px solid #dddddd;
+  width:20%;
 }
 .table thead > tr > th {
   vertical-align: bottom;
@@ -1311,6 +1315,7 @@ th {
 .table colgroup + thead tr:first-child td,
 .table thead:first-child tr:first-child td {
   border-top: 0;
+  width: 20%;
 }
 .table tbody + tbody {
   border-top: 2px solid #dddddd;

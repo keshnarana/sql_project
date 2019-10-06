@@ -4,7 +4,7 @@ var path = require("path");
 module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/index.html"));
+    res.sendFile(path.join(__dirname, "../public/admin.html"));
   });
 
   // Load example page and pass in an example by id
@@ -17,15 +17,15 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/404.html"));
   });
 
-  app.get("/blank", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/blank.html"));
+  app.get("/customer", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/customer.html"));
   });
 
   app.get("/profile", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/profile.html"));
   });
   app.get("/login", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/login.html"));
+    res.sendFile(path.join(__dirname, "../public/index.html"));
   });
   app.get("/signup", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/signup.html"));
