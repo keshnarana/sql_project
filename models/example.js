@@ -9,16 +9,16 @@ module.exports = function(sequelize, DataTypes) {
      cust_name: {
         type:DataTypes.STRING,
       },
-      ust_addr1: {
+      cust_addr1: {
         type:DataTypes.STRING,
       },
-      ust_addr2: {
+      cust_addr2: {
         type:DataTypes.STRING,
       },
       cust_zip: {
         type: DataTypes.INTEGER,
       },
-      _cust_phone: {
+      cust_phone: {
         type: DataTypes.STRING,
       },
       cust_passwd: {
@@ -29,6 +29,14 @@ module.exports = function(sequelize, DataTypes) {
       },
       cust_yelpID: {
         type:DataTypes.STRING,
-     }})
+     },
+    createdAt:{
+      type:DataTypes.INTEGER,
+    },
+    updatedAt:{
+      type: DataTypes.INTEGER,
+    }
+
+  })
   return customer;
 };
