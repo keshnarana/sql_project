@@ -1,16 +1,16 @@
 {
   "development": {
-    "username": "root",
-    "password": "Nimesh1!",
-    "database": "burgers_db",
-    "host": "localhost",
+    "username": "j8zx0xvhpa9rzvl0",
+    "password": "lh19l63ja9olicm8",
+    "database": "zgmqyg7raweijeit",
+    "host": "ffn96u87j5ogvehy.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql"
   },
   "test": {
-    "username": "root",
-    "password": "Nimesh1!",
-    "database": "burgers_db",
-    "host": "localhost",
+    "username": "j8zx0xvhpa9rzvl0",
+    "password": "lh19l63ja9olicm8",
+    "database": "zgmqyg7raweijeit",
+    "host": "ffn96u87j5ogvehy.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql",
     "logging": false
   },

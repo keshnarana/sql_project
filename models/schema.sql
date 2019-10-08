@@ -41,3 +41,4 @@ CREATE TABLE `products` (
   `retail_price` decimal(10,2) DEFAULT NULL,
   PRIMARY KEY (`item_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=322 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+

@@ -1,17 +1,17 @@
 var db = require("../models");
 
 module.exports = function(app) {
-  // Get all examples
-  app.get("/api/examples", function(req, res) {
-    db.customer.findAll({}).then(function(dbExamples) {
-      res.json(dbExamples);
+  // Get all products
+  app.get("/api/products", function(req, res) {
+    db.products.findAll({}).then(function(dbproducts) {
+      res.json(dbproducts);
     });
   });
 
-  // Create a new example
-  app.post("/api/examples", function(req, res) {
-    db.customer.create(req.body).then(function(dbExample) {
-      res.json(dbExample);
+  // Create a new Products
+  app.post("/api/products", function(req, res) {
+    db.products.create(req.body).then(function(dbProducts) {
+      res.json(dbProducts);
     });
   });
 
@@ -31,8 +31,8 @@ module.exports = function(app) {
 // });
 
   // //update
-  // app.put("/api/examples/:email", function(req, res) {
-  //   db.Example.update(
+  // app.put("/api/products/:email", function(req, res) {
+  //   db.Products.update(
     // message: req.body.message
   //     {
 
@@ -40,16 +40,16 @@ module.exports = function(app) {
   //         email: req.body.email
   //       }
   //     })
-  //     .then(function(dbExample) {
-  //       res.json(dbExample);
+  //     .then(function(dbProducts) {
+  //       res.json(dbProducts);
   //     });
   // });
   
 
   // Delete an example by id
-  app.delete("/api/examples/:id", function(req, res) {
-    db.customer.destroy({ where: { id: req.params.id } }).then(function(dbExample) {
-      res.json(dbExample);
+  app.delete("/api/products/:id", function(req, res) {
+    db.products.destroy({ where: { id: req.params.id } }).then(function(dbProducts) {
+      res.json(dbProducts);
     });
   });
 };
