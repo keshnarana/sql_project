@@ -30,6 +30,9 @@ module.exports = function(sequelize, DataTypes) {
       cust_yelpID: {
         type:DataTypes.STRING,
      },
+     quantity:{
+      type: DataTypes.INTEGER,
+     },
     createdAt:{
       type:DataTypes.INTEGER,
     },
@@ -37,6 +40,21 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.INTEGER,
     }
 
-  })
+  });
+  customer.associate = function(models) {
+    // We're saying that a customer should belong to an Author
+    // A customer can't be created without an Author due to the foreign key constraint
+    customer.hasMany(models.cust_order, {
+      foreignKey: {
+      
+          name:   'cust_id',
+        allowNull: false
+      },
+      constraints: false,
+      onDelete: "cascade",
+      
+    });
+  };
   return customer;
 };
+

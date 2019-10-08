@@ -35,10 +35,10 @@ fetche(function (examples) {
 
 function handleDeleteButtonPress() {
     var listItemData = $(this).parent("td").parent("tr").data("ex");
-    var id = listItemData.id;
+    var cust_id = listItemData.cust_id;
     $.ajax({
       method: "DELETE",
-      url: "/api/examples/" + id
+      url: "/api/examples/" + cust_id
     })
       .then($(function () {
         let exampleList =   $("#tbody")

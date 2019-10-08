@@ -12,43 +12,45 @@ module.exports = function(app) {
   app.post("/api/products", function(req, res) {
     db.products.create(req.body).then(function(dbProducts) {
       res.json(dbProducts);
+      if (dbProducts.changedRows === 0) {
+        // If no rows were changed, then the ID must not exist, so 404.
+        return res.status(404).end();
+    } else {
+        res.status(200).end();
+    }
     });
   });
 
-//   router.put("/api/burgers/:id", function(req, res) {
-//     var condition = "id = " + req.params.id;
 
-//     console.log("condition", condition);
 
-//     burger.updateOne({ devoured: req.body.devoured }, condition, function(result) {
-//         if (result.changedRows === 0) {
-//             // If no rows were changed, then the ID must not exist, so 404.
-//             return res.status(404).end();
-//         } else {
-//             res.status(200).end();
-//         }
-//     });
-// });
-
-  // //update
-  // app.put("/api/products/:email", function(req, res) {
-  //   db.Products.update(
-    // message: req.body.message
-  //     {
-
-  //       where: {
-  //         email: req.body.email
-  //       }
-  //     })
-  //     .then(function(dbProducts) {
-  //       res.json(dbProducts);
-  //     });
-  // });
+  //update
+  app.post("/api/products/:upc_code", function(req, res) {
+    db.products.update(
+     { upc_code: req.body.upc_code,
+      product_name:req.body.product_name,
+      stock_quantity:req.body.stock_quantity,
+      wholsale_cost:req.body.wholsale_cost},
+      {
+         where: {
+          upc_code: req.params.upc_code
+        }
+      })
+      .then(function(dbProducts) {
+        res.json(dbProducts);
+        if (dbProducts.changedRows === 0) {
+                      // If no rows were changed, then the ID must not exist, so 404.
+                      return res.status(404).end();
+                  } else {
+                      res.status(200).end();
+                  }
+        
+      });
+  });
   
 
   // Delete an example by id
-  app.delete("/api/products/:id", function(req, res) {
-    db.products.destroy({ where: { id: req.params.id } }).then(function(dbProducts) {
+  app.delete("/api/products/:item_id", function(req, res) {
+    db.products.destroy({ where: { item_id: req.params.item_id } }).then(function(dbProducts) {
       res.json(dbProducts);
     });
   });
