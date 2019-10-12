@@ -4,6 +4,7 @@
 
 @import url(line-icons.css);
 
+
 table.scroll {
     width: 716px; /* 140px * 5 column + 16px scrollbar width */
     border-spacing: 0;
@@ -44,7 +45,7 @@ tbody td:last-child, thead th:last-child {
 
 body {
 
-    color: #797979;
+    color: black;
 
     background: #eeeeee;
 
@@ -54,7 +55,7 @@ body {
 
     margin: 0px !important;
 
-    font-size:14px !important;
+    font-size:15px !important;
 
 }
 

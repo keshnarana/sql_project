@@ -13,9 +13,9 @@ function createe(example) {
    var newTr = $("<tr>");
    newTr.data("ex", example);
     
-   newTr.append("<td>" +example.cust_id+ "</td>");
+   newTr.append("<td>" +example.id+ "</td>");
    newTr.append("<td>" +example.cust_name+ "</td>");
-       newTr.append("<td>" +example.cust_email+ "</td>");
+       newTr.append("<td>" +example.email+ "</td>");
        newTr.append("<td>" +example.cust_phone+ "</td>");
        newTr.append("<td> <a style='cursor:pointer;color:red'  class='delete'>Delete User</a></td>");
 
@@ -35,10 +35,10 @@ fetche(function (examples) {
 
 function handleDeleteButtonPress() {
     var listItemData = $(this).parent("td").parent("tr").data("ex");
-    var cust_id = listItemData.cust_id;
+    var id = listItemData.id;
     $.ajax({
       method: "DELETE",
-      url: "/api/examples/" + cust_id
+      url: "/api/examples/" + id
     })
       .then($(function () {
         let exampleList =   $("#tbody")
