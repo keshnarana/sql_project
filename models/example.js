@@ -1,43 +1,40 @@
 //making a table called customer in db
 module.exports = function(sequelize, DataTypes) {
   var customer = sequelize.define("customer", {
-    cust_id:{
+    id: {
       type: DataTypes.INTEGER,
-      autoIncremet:true,
+      autoIncremet: true,
       primaryKey: true,
-     },
-     cust_name: {
-        type:DataTypes.STRING,
-      },
-      cust_addr1: {
-        type:DataTypes.STRING,
-      },
-      cust_addr2: {
-        type:DataTypes.STRING,
-      },
-      cust_zip: {
-        type: DataTypes.INTEGER,
-      },
-      cust_phone: {
-        type: DataTypes.STRING,
-      },
-      cust_passwd: {
-        type: DataTypes.INTEGER,
-      },
-      cust_email: {
-        type:DataTypes.TEXT
-      },
-      cust_yelpID: {
-        type:DataTypes.STRING,
-     },
-     quantity:{
-      type: DataTypes.INTEGER,
-     },
-    createdAt:{
-      type:DataTypes.INTEGER,
     },
-    updatedAt:{
+    cust_name: {
+      type: DataTypes.STRING,
+    },
+    cust_addr1: {
+      type: DataTypes.STRING,
+    },
+    cust_addr2: {
+      type: DataTypes.STRING,
+    },
+    cust_zip: {
+      type: DataTypes.STRING,
+    },
+    cust_phone: {
+      type: DataTypes.STRING,
+    },
+    cust_type: {
       type: DataTypes.INTEGER,
+    },
+    cust_username: {
+      type: DataTypes.STRING,
+    },
+    password: {
+      type: DataTypes.STRING,
+    },
+    email: {
+      type: DataTypes.STRING,
+    },
+    cust_yelpID: {
+      type: DataTypes.STRING,
     }
 
   });
@@ -47,7 +44,7 @@ module.exports = function(sequelize, DataTypes) {
     customer.hasMany(models.cust_order, {
       foreignKey: {
       
-          name:   'cust_id',
+          name:   'id',
         allowNull: false
       },
       constraints: false,
@@ -57,4 +54,3 @@ module.exports = function(sequelize, DataTypes) {
   };
   return customer;
 };
-

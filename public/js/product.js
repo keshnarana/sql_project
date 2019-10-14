@@ -8,7 +8,7 @@ $( document ).ready(function() {
  
 
 $('#addpr').click(function () {
-    // event.preventDefault();
+    event.preventDefault();
     addP(
         upc_code.val(),
         product_name.val(),
@@ -19,7 +19,7 @@ $('#addpr').click(function () {
             var total_cost = parseInt(stock_quantity.val()) * wholsale_cost.val();
 
          var p=$("<p>")
-         p.append("<h1>"+addP.product_name + "is added to product list. total_cost is" +total_cost+"$.</h1>")
+         p.append("<h1>"+addP.product_name + " is added to product list. total_cost is" +total_cost+"$.</h1>")
          $("#statement").append(p)
          console.log(addP.product_name)
          console.log(total_cost)
@@ -108,7 +108,7 @@ function handleDelete() {
 
 // start update button
 $('#updpr').click(function () {
-    // event.preventDefault();
+     event.preventDefault();
     edit(
         upc_code.val(),
         product_name.val(),
@@ -118,7 +118,7 @@ $('#updpr').click(function () {
         function (edit) {
             
             var p=$("<p>")
-            p.append("<h1>"+edit.product_name + "is added to product list.</h1>")
+            p.append("<h1>"+edit.product_name + " is added to product list.</h1>")
             $("#statement").append(p)
             console.log(edit.product_name)
            
