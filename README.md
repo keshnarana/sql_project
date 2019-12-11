@@ -4,10 +4,10 @@ demo: https://sequelizeproject2.herokuapp.com/
 
 An inventory app using sequelize, capable of doing CRUD operations. 
 
-Tools/languages used:
+Tools/languages used:<br>
 Bootstrap 4,<br>
-express.js,
-Node.js,
-sequelize,
-mysql,
+express.js,<br>
+Node.js,<br>
+sequelize,<br>
+mysql,<br>
 heroku.
