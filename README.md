@@ -2,7 +2,7 @@
 
 demo: https://sequelizeproject2.herokuapp.com/
 
-An inventory app using sequelize, capable of doing CRUD operations. 
+A full stack inventory app using sequelize, capable of doing CRUD operations. 
 
 Tools/languages used:<br>
 Bootstrap 4,<br>
